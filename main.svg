@@ -1,0 +1,90 @@
+<svg viewBox="0 0 520 380" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background glow -->
+  <ellipse cx="260" cy="200" rx="200" ry="150" fill="#5b6af0" opacity="0.06"/>
+  
+  <!-- Monitor -->
+  <rect x="80" y="60" width="360" height="220" rx="12" fill="#1a1a2e" stroke="#2a2a45" stroke-width="1.5"/>
+  <rect x="95" y="75" width="330" height="190" rx="6" fill="#0d0d1a"/>
+  <!-- Screen glow -->
+  <rect x="95" y="75" width="330" height="190" rx="6" fill="#5b6af0" opacity="0.04"/>
+  
+  <!-- Monitor stand -->
+  <rect x="225" y="280" width="70" height="16" rx="4" fill="#1a1a2e" stroke="#2a2a45" stroke-width="1"/>
+  <rect x="195" y="294" width="130" height="10" rx="5" fill="#1a1a2e" stroke="#2a2a45" stroke-width="1"/>
+  
+  <!-- Code lines in editor -->
+  <!-- Line numbers -->
+  <rect x="105" y="90" width="28" height="165" rx="0" fill="#111128"/>
+  <text x="119" y="110" text-anchor="middle" fill="#3a3a55" font-family="monospace" font-size="9">1</text>
+  <text x="119" y="125" text-anchor="middle" fill="#3a3a55" font-family="monospace" font-size="9">2</text>
+  <text x="119" y="140" text-anchor="middle" fill="#3a3a55" font-family="monospace" font-size="9">3</text>
+  <text x="119" y="155" text-anchor="middle" fill="#3a3a55" font-family="monospace" font-size="9">4</text>
+  <text x="119" y="170" text-anchor="middle" fill="#3a3a55" font-family="monospace" font-size="9">5</text>
+  <text x="119" y="185" text-anchor="middle" fill="#3a3a55" font-family="monospace" font-size="9">6</text>
+  <text x="119" y="200" text-anchor="middle" fill="#3a3a55" font-family="monospace" font-size="9">7</text>
+  <text x="119" y="215" text-anchor="middle" fill="#3a3a55" font-family="monospace" font-size="9">8</text>
+  <text x="119" y="230" text-anchor="middle" fill="#3a3a55" font-family="monospace" font-size="9">9</text>
+  
+  <!-- Code content -->
+  <!-- Line 1: function keyword -->
+  <text x="142" y="110" fill="#c792ea" font-family="monospace" font-size="9.5">function</text>
+  <text x="192" y="110" fill="#82aaff" font-family="monospace" font-size="9.5">buildApp</text>
+  <text x="238" y="110" fill="#89ddff" font-family="monospace" font-size="9.5">() {'{' }</text>
+  
+  <!-- Line 2 -->
+  <text x="152" y="125" fill="#c792ea" font-family="monospace" font-size="9.5">const</text>
+  <text x="184" y="125" fill="#f07178" font-family="monospace" font-size="9.5">db</text>
+  <text x="198" y="125" fill="#89ddff" font-family="monospace" font-size="9.5">=</text>
+  <text x="208" y="125" fill="#c3e88d" font-family="monospace" font-size="9.5">MySQL();</text>
+  
+  <!-- Line 3 -->
+  <text x="152" y="140" fill="#c792ea" font-family="monospace" font-size="9.5">const</text>
+  <text x="184" y="140" fill="#f07178" font-family="monospace" font-size="9.5">ui</text>
+  <text x="198" y="140" fill="#89ddff" font-family="monospace" font-size="9.5">=</text>
+  <text x="208" y="140" fill="#c3e88d" font-family="monospace" font-size="9.5">Tailwind();</text>
+  
+  <!-- Line 4 -->
+  <text x="152" y="155" fill="#c792ea" font-family="monospace" font-size="9.5">const</text>
+  <text x="184" y="155" fill="#f07178" font-family="monospace" font-size="9.5">api</text>
+  <text x="198" y="155" fill="#89ddff" font-family="monospace" font-size="9.5">=</text>
+  <text x="208" y="155" fill="#c3e88d" font-family="monospace" font-size="9.5">PHP();</text>
+  
+  <!-- Line 5 blank -->
+  <!-- Line 6 -->
+  <text x="152" y="185" fill="#c792ea" font-family="monospace" font-size="9.5">return</text>
+  <text x="190" y="185" fill="#89ddff" font-family="monospace" font-size="9.5">{'{ db, ui, api };'}</text>
+  
+  <!-- Line 7 closing -->
+  <text x="142" y="200" fill="#89ddff" font-family="monospace" font-size="9.5">{'}'}</text>
+  
+  <!-- Cursor blink -->
+  <rect x="142" y="213" width="7" height="12" rx="1" fill="#5b6af0" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0;0.9" dur="1.2s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Highlight line 2 -->
+  <rect x="134" y="118" width="280" height="13" rx="2" fill="#5b6af0" opacity="0.12"/>
+
+  <!-- Floating tags -->
+  <!-- PHP tag -->
+  <rect x="20" y="90" width="46" height="22" rx="11" fill="#5b6af0" opacity="0.9"/>
+  <text x="43" y="105" text-anchor="middle" fill="white" font-family="monospace" font-size="10" font-weight="600">PHP</text>
+  
+  <!-- MySQL tag -->
+  <rect x="440" y="80" width="62" height="22" rx="11" fill="#2dd4bf" opacity="0.85"/>
+  <text x="471" y="95" text-anchor="middle" fill="#0a0a14" font-family="monospace" font-size="10" font-weight="600">MySQL</text>
+  
+  <!-- JS tag -->
+  <rect x="445" y="200" width="54" height="22" rx="11" fill="#fbbf24" opacity="0.9"/>
+  <text x="472" y="215" text-anchor="middle" fill="#1a1000" font-family="monospace" font-size="10" font-weight="600">JS</text>
+  
+  <!-- CSS tag -->
+  <rect x="15" y="210" width="52" height="22" rx="11" fill="#a78bfa" opacity="0.85"/>
+  <text x="41" y="225" text-anchor="middle" fill="white" font-family="monospace" font-size="10" font-weight="600">CSS</text>
+  
+  <!-- dots decoration -->
+  <circle cx="60" cy="160" r="3" fill="#5b6af0" opacity="0.5"/>
+  <circle cx="470" cy="150" r="3" fill="#2dd4bf" opacity="0.5"/>
+  <circle cx="50" cy="270" r="2" fill="#a78bfa" opacity="0.4"/>
+  <circle cx="470" cy="260" r="2" fill="#fbbf24" opacity="0.4"/>
+</svg>
