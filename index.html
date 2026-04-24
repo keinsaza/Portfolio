@@ -529,12 +529,15 @@ function toggleTheme(){
 let lbImages = [];
 let lbIndex = 0;
 
-function openLightbox(src){
-  // Collect all visible images
-  lbImages = Array.from(document.querySelectorAll('.feature-img-wrap img, .carousel-track img'))
-    .map(i => i.src).filter((v,i,a) => a.indexOf(v)===i);
+function openLightbox(src, carouselTrackId){
+  if(carouselTrackId){
+    const track = document.getElementById(carouselTrackId);
+    lbImages = track ? Array.from(track.querySelectorAll('img')).map(i => i.src) : [src];
+  } else {
+    lbImages = [src];
+  }
   lbIndex = lbImages.indexOf(src);
-  if(lbIndex < 0) { lbImages = [src]; lbIndex = 0; }
+  if(lbIndex < 0) lbIndex = 0;
   lbShow();
   document.getElementById('lightbox').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -566,13 +569,14 @@ document.addEventListener('keydown',e=>{
   if(e.key==='ArrowLeft') lbMove(-1);
 });
 
-// Make all feature-card images clickable to open lightbox
+// Make all carousel images clickable to open lightbox (scoped to their own carousel)
 document.addEventListener('DOMContentLoaded', function(){
-  document.querySelectorAll('.feature-img-wrap img, .carousel-track img').forEach(img => {
+  document.querySelectorAll('.carousel-track img').forEach(img => {
     img.style.cursor = 'zoom-in';
     img.addEventListener('click', function(e){
       e.stopPropagation();
-      openLightbox(this.src);
+      const track = this.closest('.carousel-track');
+      openLightbox(this.src, track ? track.id : null);
     });
   });
 });
